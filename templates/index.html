@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eClerx Batch 2 Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <main class="card">
+        <header class="header">
+            <h1>eClerx Batch 2 Demo</h1>
+            <p class="welcome">
+                Welcoming all the participants from eClerx &mdash;
+                let's make useful products in the next couple of weeks!
+            </p>
+        </header>
+
+        <section class="translator">
+            <h2>English &rarr; German Translator</h2>
+
+            <label for="inputText" class="field-label">Enter an English sentence</label>
+            <textarea
+                id="inputText"
+                rows="4"
+                placeholder="Type something in English..."
+            ></textarea>
+
+            <button id="submitBtn" type="button">Translate</button>
+
+            <div id="message" class="message" role="status" aria-live="polite"></div>
+
+            <div id="outputWrapper" class="output-wrapper hidden">
+                <h3>German translation</h3>
+                <div id="outputText" class="output"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
